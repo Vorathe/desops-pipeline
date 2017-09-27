@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'assets/scss/variables/variables-brandai';
+@import 'assets/scss/icons/icons-brandai';
+
+html,
+body {
+  font-family: $font-heading-1-font-family;
+  font-size: 16px;
+}
