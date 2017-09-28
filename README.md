@@ -14,7 +14,7 @@ If a machine can read and parse these artifacts, then the process of those being
 
 In order to achieve this we leverage [brand.ai](https://brand.ai "Brand.ai") coupled with their [sketch plugin](https://brand.ai/sketch "Brand.ai Sketch Plugin").
 
-This service does several things for us:
+###### Service Features
 
 1. Automates a design library
 2. Can edit (read/write) design library in browser
