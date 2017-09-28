@@ -1,23 +1,14 @@
 @import '../assets/scss/variables/variables-brandai';
-$icon-size-default: 18px;
 
-
-.title-block {
+:host {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
 }
 
-.title-icon {
+.app-wrapper {
   display: flex;
-  flex-shrink: 1;
-  width: $icon-size-default;
-  height: $icon-size-default;
-  margin-right: 5px;
-}
-
-.title-name {
-  font-size: $font-heading-3-font-size;
-  line-height: $font-heading-3-line-height;
-  display: flex;
-  flex-grow: 1;
+  flex-direction: column;
+  flex: 1 0 80%;
 }

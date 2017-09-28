@@ -11,7 +11,7 @@
     "e2e": "ng e2e",
     "brandai-download": "echo \"Downloading Brand.ai assets...\" && npm run brandai-assets && echo \"Processing SVG icons...\" && npm run process-icons",
     "brandai-assets": "npm run clean-assets && node fetch-brandai-assets.js",
-    "process-icons": "svg-sprite -sD src/assets/tmp --symbol-dest . --sscss src/assets/tmp/*.svg --ss ../scss/icons/_icons-brandai.scss.svg --symbol-render-scss-dest ../scss/icons/_icons-brandai.scss && rimraf src/assets/tmp",
+    "process-icons": "svg-sprite -h 18 -w 18 -sD src/assets/tmp --symbol-dest . --sscss src/assets/tmp/*.svg --ss ../scss/icons/_icons-brandai.scss.svg --symbol-render-scss-dest ../scss/icons/_icons-brandai.scss && rimraf src/assets/tmp",
     "clean-assets": "npm run clean-icons && npm run clean-logos && npm run clean-styles",
     "clean-icons": "rimraf src/assets/scss/icons/_icons-brandai.scss && rimraf src/assets/scss/icons/_icons-brandai.scss.svg",
     "clean-logos": "rimraf src/assets/imgs/logos",
@@ -30,6 +30,7 @@
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
     "core-js": "^2.4.1",
+    "reset-css": "^2.2.1",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },

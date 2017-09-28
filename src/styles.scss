@@ -1,10 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/reset-css/reset';
 @import 'assets/scss/variables/variables-brandai';
 @import 'assets/scss/variables/variables-proj';
 @import 'assets/scss/icons/icons-brandai';
+@import 'assets/scss/typography/headings';
 @import 'assets/scss/buttons/buttons';
 
 html,
 body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
   @include font-base();
 }

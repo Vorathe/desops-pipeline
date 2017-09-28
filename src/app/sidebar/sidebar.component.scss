@@ -1,0 +1,30 @@
+@import '../../assets/scss/variables/variables-brandai';
+
+:host {
+  display: flex;
+  flex: 0 1 20%;
+  background-color: $color-secondary-blue-70;
+}
+
+.sidebar-header {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar-header-inner {
+  flex: 1;
+}
+
+.sidebar-header-title {
+  padding: $sizing-unit-20;
+  background-color: $color-secondary-blue;
+  box-shadow: $shadow-flat-shadow;
+
+
+  > h2 {
+    line-height: 32px;
+    color: $color-alabaster;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

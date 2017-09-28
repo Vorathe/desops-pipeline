@@ -1,0 +1,23 @@
+@import '../../assets/scss/variables/variables-brandai';
+@import '../../assets/scss/variables/variables-proj';
+
+:host {
+  padding: $sizing-unit-20;
+  background-color: $color-primary-dark;
+  display: flex;
+  box-shadow: $shadow-flat-shadow;
+}
+
+.icon-menu {
+  width: 32px;
+  height: 32px;
+  fill: $color-alabaster;
+  cursor: pointer;
+  transition: fill $animation-speed;
+  flex: 0 1 auto;
+
+  &:hover {
+    fill: $color-alto;
+    transition: fill $animation-speed;
+  }
+}
