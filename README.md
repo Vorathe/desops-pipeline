@@ -1,4 +1,4 @@
-# Design Operations Pipeline
+# Design Operations Web Development Workflow
 
 This is an experiment to automate basic aspects of the design workflow within the context of a software development project.
 
