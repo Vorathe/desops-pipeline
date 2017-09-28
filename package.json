@@ -12,8 +12,9 @@
     "brandai-download": "echo \"Downloading Brand.ai assets...\" && npm run brandai-assets && echo \"Processing SVG icons...\" && npm run process-icons",
     "brandai-assets": "npm run clean-assets && node fetch-brandai-assets.js",
     "process-icons": "svg-sprite -sD src/assets/tmp --symbol-dest . --sscss src/assets/tmp/*.svg --ss ../scss/icons/_icons-brandai.scss.svg --symbol-render-scss-dest ../scss/icons/_icons-brandai.scss && rimraf src/assets/tmp",
-    "clean-assets": "npm run clean-icons && npm run clean-styles",
+    "clean-assets": "npm run clean-icons && npm run clean-logos && npm run clean-styles",
     "clean-icons": "rimraf src/assets/scss/icons/_icons-brandai.scss && rimraf src/assets/scss/icons/_icons-brandai.scss.svg",
+    "clean-logos": "rimraf src/assets/imgs/logos",
     "clean-styles": "rimraf src/assets/scss/variables/_variables-brandai.scss",
     "postinstall": "npm run brandai-download"
   },

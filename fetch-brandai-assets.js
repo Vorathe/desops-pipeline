@@ -4,11 +4,14 @@ const path = require('path'),
 
 const filenameIcon = 'icons.zip',
   filenameStyle = '_variables-brandai.scss',
+  filenameLogos = 'logos.zip',
   pathIcons = path.resolve('src', 'assets', 'tmp'),
+  pathLogos = path.resolve('src', 'assets', 'img', 'logos'),
   pathStyle = path.resolve('src', 'assets', 'scss', 'variables'),
   assets = {
     key: 'rJ2E0pU9Z',
     icons: 'https://assets.brand.ai/projectzero/project-zero/icons.zip',
+    logos: 'https://assets.brand.ai/projectzero/project-zero/logos.zip',
     style: 'https://assets.brand.ai/projectzero/project-zero/_style-params.scss'
   };
 
@@ -19,8 +22,8 @@ const execDownload = (url, key, dest, filename, extract) => {
   });
 };
 
-const fetchAssets = (icons, styles) => {
-  Promise.all([fetchIcons(icons, filenameIcon), fetchStyle(styles, filenameStyle)])
+const fetchAssets = (icons, logos, styles) => {
+  Promise.all([fetchIcons(icons, filenameIcon), fetchLogos(logos, filenameLogos), fetchStyle(styles, filenameStyle)])
     .then(() => {
     console.log('Assets imported successfully');
   }).catch(error => {
@@ -37,6 +40,15 @@ const fetchIcons = function(path, filename) {
   });
 };
 
+const fetchLogos = function(path, filename) {
+  return execDownload(assets.logos, assets.key, path, filename, true)
+    .then(() => {
+      console.log('Image download and extraction complete');
+    }).catch(error => {
+      throw new Error('Failed to download images, ' + error);
+    });
+};
+
 const fetchStyle = function(path, filename) {
   return execDownload(assets.style, assets.key, path, filename, false)
     .then(() => {
@@ -46,4 +58,4 @@ const fetchStyle = function(path, filename) {
   });
 };
 
-fetchAssets(pathIcons, pathStyle);
+fetchAssets(pathIcons, pathLogos, pathStyle);
