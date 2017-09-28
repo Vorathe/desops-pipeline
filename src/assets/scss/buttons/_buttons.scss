@@ -1,0 +1,26 @@
+button {
+  padding: $spacing-button-padding-top-bottom $spacing-button-padding-left-right;
+  box-shadow: $shadow-button-shadow;
+  border-radius: $radius-button;
+  border: $sizing-unit-1 solid $color-primary-dark;
+  cursor: pointer;
+  @include font-button-label();
+}
+
+.button-group > button {
+  margin-right: $spacing-button-margin-between;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+button.primary {
+  background-color: $color-primary-orange;
+  transition: background-color 200ms;
+
+  &:hover {
+    background-color: $color-primary-orange-70;
+    transition: background-color 200ms;
+  }
+}
