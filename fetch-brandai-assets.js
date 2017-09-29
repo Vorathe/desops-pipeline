@@ -1,5 +1,4 @@
 const path = require('path'),
-  fs = require('fs'),
   dl = require('download');
 
 const filenameIcon = 'icons.zip',
@@ -18,7 +17,7 @@ const filenameIcon = 'icons.zip',
 const execDownload = (url, key, dest, filename, extract) => {
   return dl(url + '?key=' + key, dest, { extract: extract, filename: filename })
     .catch(error => {
-      throw new Error('Failed to fetch icons, ' + error);
+      return Promise.reject('Download failed, ' + error);
   });
 };
 
@@ -27,7 +26,7 @@ const fetchAssets = (icons, logos, styles) => {
     .then(() => {
     console.log('Assets imported successfully');
   }).catch(error => {
-    throw new Error('Failed to fetch assets, ' + error);
+    return Promise.reject('Failed to fetch assets, ' + error);
   });
 };
 
@@ -36,7 +35,7 @@ const fetchIcons = function(path, filename) {
     .then(() => {
     console.log('Icon download and extraction complete');
   }).catch(error => {
-    throw new Error('Failed to download icons, ' + error);
+    return Promise.reject('Failed to download icons, ' + error);
   });
 };
 
@@ -45,7 +44,7 @@ const fetchLogos = function(path, filename) {
     .then(() => {
       console.log('Image download and extraction complete');
     }).catch(error => {
-      throw new Error('Failed to download images, ' + error);
+      return Promise.reject('Failed to download images, ' + error);
     });
 };
 
@@ -54,7 +53,7 @@ const fetchStyle = function(path, filename) {
     .then(() => {
     console.log('Style download complete');
   }).catch(error => {
-    throw new Error('Failed to download style, ' + error);
+      return Promise.reject('Failed to download style, ' + error);
   });
 };
 
