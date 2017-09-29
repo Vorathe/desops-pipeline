@@ -1,5 +1,6 @@
 h1 {
   @include font-heading-1();
+  margin-bottom: $sizing-unit-20;
 }
 
 h2 {

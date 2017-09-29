@@ -1,14 +1,18 @@
 @import '../assets/scss/variables/variables-brandai';
+@import '../assets/scss/variables/variables-proj';
 
 :host {
   display: flex;
   flex-direction: row;
   height: 100%;
   width: 100%;
+  background-color: $color-gallery;
 }
 
 .app-wrapper {
   display: flex;
   flex-direction: column;
   flex: 1 0 80%;
+  position: relative;
+  z-index: $z-index-app-wrapper;
 }

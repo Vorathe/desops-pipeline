@@ -1,9 +1,12 @@
 @import '../../assets/scss/variables/variables-brandai';
+@import '../../assets/scss/variables/variables-proj';
 
 :host {
   display: flex;
   flex: 0 1 20%;
   background-color: $color-secondary-blue-70;
+  position: relative;
+  z-index: $z-index-sidebar;
 }
 
 .sidebar-header {
