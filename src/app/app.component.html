@@ -1,5 +1,5 @@
-<app-sidebar></app-sidebar>
+<app-sidebar [menuOpen]="menuOpen" [@slideLeft]="menuOpen ? 'open' : 'closed'"></app-sidebar>
 <div class="app-wrapper">
-  <app-header></app-header>
+  <app-header (menuOpen)="defaultState($event)"></app-header>
   <app-content></app-content>
 </div>

@@ -1,6 +1,9 @@
 @import '../../assets/scss/variables/variables-brandai';
 $icon-size-default: 18px;
 
+:host {
+  padding: $sizing-unit-20;
+}
 
 .title-block {
   display: flex;
