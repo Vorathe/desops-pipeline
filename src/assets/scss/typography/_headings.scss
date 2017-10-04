@@ -5,8 +5,14 @@ h1 {
 
 h2 {
   @include font-heading-2();
+  margin-bottom: $sizing-unit-20;
 }
 
 h3 {
   @include font-heading-3();
+  margin-bottom: $sizing-unit-20;
+}
+
+hr {
+  margin: $sizing-unit-20 0;
 }
