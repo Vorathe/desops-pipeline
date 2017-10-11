@@ -5,6 +5,7 @@
   padding: $sizing-unit-20;
   background-color: $color-primary-dark;
   display: flex;
+  align-items: center;
   box-shadow: $shadow-flat-shadow;
 }
 
@@ -29,4 +30,9 @@
   border: 0;
   box-shadow: none;
   line-height: 0;
+}
+
+img {
+  height: $sizing-icon-lg;
+  margin-left: $font-base-font-size;
 }

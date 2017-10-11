@@ -13,8 +13,6 @@ $icon-size-default: 18px;
 .title-icon {
   display: flex;
   flex-shrink: 1;
-  width: $icon-size-default;
-  height: $icon-size-default;
   margin-right: 5px;
 }
 
@@ -23,4 +21,38 @@ $icon-size-default: 18px;
   line-height: $font-heading-3-line-height;
   display: flex;
   flex-grow: 1;
+}
+
+.title-block {
+  margin-bottom: $sizing-unit-20;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.swatch-container {
+  display: flex;
+}
+
+.swatch {
+  flex: 1;
+  width: 100px;
+  height: 100px;
+}
+
+.primary {
+  background-color: $color-primary-orange;
+}
+
+.primary-dark {
+  background-color: $color-primary-dark;
+}
+
+.secondary {
+  background-color: $color-secondary-blue;
+}
+
+.tertiary {
+  background-color: $color-tertiary-blue;
 }
